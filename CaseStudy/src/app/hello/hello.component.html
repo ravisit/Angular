@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-md-6 mx-auto">
+           <h2>Hello {{text}}</h2>
+              <div class="card-body">
+                    <form class="form" [formGroup] ="form">
+                        <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input (keyup)="updatePhone(mphone.value)" #mphone name="phone" [(value)] ="phone" type="text" class="form-control rounded-0" placeholder="Mobile Number" autofocus=""
+                        formControlName="phone" [ngClass]="{
+                            'is-invalid': form.get('phone').touched && form.get('phone').invalid}">
+                        <div *ngIf="(mobile.invalid && mobile.touched) || mobile.dirty" class="invalid-feedback">
+                            <div *ngIf="mobile.errors?.required">Mobile Number is required.</div>
+                            <div *ngIf="mobile.errors?.pattern">Please, Enter 10 digit Mobile Number.</div>
+                        </div>
+                        </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input (keyup) ="updateEmail(emailAdd.value)" #emailAdd [(value)] ="email" name="email" type="email" class="form-control rounded-0" placeholder="Email address"
+                        formControlName="email" [ngClass]="{
+                            'is-invalid': form.get('email').touched && form.get('email').invalid}">
+                        <div *ngIf ="(mail.invalid && mail.touched) || mail.dirty" class="invalid-feedback">
+                            <div *ngIf ="mail.errors?.required">Email is required</div>
+                            <div *ngIf ="mail.errors?.email">Please, Enter valid Email</div>
+                        </div>    
+                    </div>
+                </form>
+              </div>
+         
+       </div>
+   </div>
+    <div class="row">
+        <div class="col-md-9">
+            <button (click)="nextPage()" type="button" class="btn btn-primary float-right">Next</button>   
+        </div>
+    </div>
+</div>
+<!--<div>
+    <p>{{values}}</p>
+</div> -->

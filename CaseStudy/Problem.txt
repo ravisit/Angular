@@ -1,0 +1,8 @@
+1. Create a login page. Authentication should be there.
+2. On login, Redirect the user to Hello page (Hello page should be the landing page)
+  -Content to be dispayed in Hello page: Hello <UserName>.
+  -contain two input fields Phone number and Email ID (Validation should be taken care of)
+  -Provide a Next button in the Hello page. On click of Next button, User should redirect to products-info page
+3. In products-info page, display 3 products(with names Prod1, Prod2 and Prod3) as accordions in collapsed view and provide 'Back' and Save buttons at the bottom of page. When user clicks on Back button, he should be redirected to Home Page with the entered details of Phone No and Email Id.
+   -Each product accordion should contain some data about the product and provide one input field 'Remarks'at last within the accordion. 
+   -On click of Save button, the remarks provided for each product should be saved. So When user clicks navigated from the products-info page to Home and back to Product info page, the data in the Remarks field should be there.

@@ -1,0 +1,24 @@
+<p Myred>Simple attribute 
+  directive example</p>
+
+  <front appNiceTheme>niceTheme Directive Demo</front>
+<br /><br />
+  <div appColorInput inputColor="blue"> myColor Directive Demo</div> 
+
+  <p [appTextSize]="txtsize1"> textSize Directive Demo using Bracket []</p>
+  <p bind-appTextSize="txtsize2"> textSize Directive Demo using bind- prefix  </p>
+  <p appTextSize="{{txtsize3}}"> textSize Directive Demo using Interpolation</p>  
+  <br />
+  <div appCustomTheme> customTheme Directive Demo with Default Settings</div>
+<div appCustomTheme tcolor="yellow" bcolor="black" tsize="30px"> customTheme Directive Demo with Custom Settings</div> 
+<p appMouseAction> mouseAction Directive Demo</p>
+
+<div>
+    <select [(ngModel)] ='myColor'> <!-- there is an issue with [(ngModel)]-->
+      <option value="" selected> Select Color</option>
+      <option *ngFor = "let color of colors" [value] = 'color'>
+        {{color}}
+      </option>
+    </select>
+    <p [appDynamicColor] ='myColor' defaultValue='red'>dynamicColor Directive Demo</p>
+</div>

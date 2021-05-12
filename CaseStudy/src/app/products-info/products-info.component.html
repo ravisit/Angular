@@ -1,0 +1,60 @@
+<form #userForm="ngForm" novalidate>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne">Mobile</button>									
+            </h2>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <p>Name:Samsung Galaxy M31 1</p>
+                <p>Id:M31</p>
+                <p>It is of color Ocean blue, 6GB RAM and 128 GB storage. You can play high graphics game in it.</p>
+                <label>Remarks:</label><br>
+                <input type="text" placeholder="Remarks" class="form-control" name="remarks1" [(ngModel)]="remarks1"/>  
+            </div>
+        </div>
+    </div>
+      <div class="card">
+          <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo">Laptop</button>
+              </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                  <p>Name: Acer Nitro 5</p>
+                  <p>Id:515AN</p>
+                  <p>It is of 15.5-inch FHD IPS display. It is also a gaming laptop.</p>
+                  <label>Remarks:</label><br>
+                  <input type="text" placeholder="Remarks" class="form-control" name="remarks2" [(ngModel)]="remarks2"/>   
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree">Water Bottle</button>                     
+              </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                  <p>Name:Milton Aqua</p>
+                  <p>Id:1000</p>
+                  <p>It is vaccum insulated. It is portable.</p>
+                  <label>Remarks:</label><br>
+                  <input type="text" placeholder="Remarks" class="form-control" name="remarks3" [(ngModel)]="remarks3"/>    
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="my-4">
+    <div class="vertical-center">
+        <button class="previous" type="submit" class="btn btn-primary" (click)="goHome()"> Back </button>
+          <button class="next" type="submit"
+          class="btn btn-primary float-right" (click)="onsave(remarks1,remarks2,remarks3)">Save </button>
+    </div>
+  </div>
+</form>
